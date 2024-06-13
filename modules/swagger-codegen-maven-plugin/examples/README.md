@@ -7,4 +7,5 @@
       * Solution: `mvn io.swagger:swagger-codegen-maven-plugin:2.3.1:generate`
     * Problem3: The parameters 'inputSpec', 'language' are missing or invalid
       * Attempt1: `<inputSpec>.swagger.yaml</inputSpec>`
+      * Attempt2: Use 'io.swagger.codegen.v3:swagger-codegen-maven-plugin'
       * Solution: TODO:

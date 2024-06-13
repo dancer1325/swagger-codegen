@@ -10,9 +10,13 @@
         <plugins>
             <!-- activate the plugin -->
             <plugin>
-                <groupId>io.swagger</groupId>
+                <!--<groupId>io.swagger</groupId>
                 <artifactId>swagger-codegen-maven-plugin</artifactId>
-                <version>2.3.1</version>
+                <version>2.3.1</version>-->
+
+                <groupId>io.swagger.codegen.v3</groupId>
+                <artifactId>swagger-codegen-maven-plugin</artifactId>
+                <version>3.0.57</version>
                 <executions>
                     <execution>
                         <goals>
