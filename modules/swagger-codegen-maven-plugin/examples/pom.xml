@@ -20,7 +20,8 @@
                         </goals>
                         <configuration>
                             <!-- specify the swagger yaml -->
-                            <inputSpec>./swagger.yaml</inputSpec>
+                            <!--<inputSpec>swagger.yaml</inputSpec> -->
+                            <inputSpec>.swagger.yaml</inputSpec>
 
                             <!-- target to generate java client code -->
                             <language>java</language>
