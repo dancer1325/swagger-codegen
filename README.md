@@ -19,71 +19,10 @@
 
 :notebook_with_decorative_cover: The eBook [A Beginner's Guide to Code Generation for REST APIs](https://gumroad.com/l/swagger_codegen_beginner) is a good starting point for beginners.
 
-## Versioning
-
-**NOTE:** version 2.X (`io.swagger`) and 3.X (`io.swagger.codegen.v3`) have **different** group ids.
-
-2.X and 3.X version lines of Swagger Codegen are available; 2.X (`master` branch) supports Swagger/OpenAPI version 2,
-while 3.X ([`3.0.0` branch](https://github.com/swagger-api/swagger-codegen/tree/3.0.0)) supports OpenAPI version 3 (and version 2 via spec conversion to version 3).
-[Online generator of version 3.X](https://github.com/swagger-api/swagger-codegen/tree/3.0.0#online-generators) supports both generation from Swagger/OpenAPI version 2 (by using engine + generators of 2.X) and version 3 specifications.
-
-
-**NOTE:** this document refers to version 2.X, check [here](https://github.com/swagger-api/swagger-codegen/tree/3.0.0) for 3.X.
-
-
-### Swagger Codegen 2.X ([`master` branch](https://github.com/swagger-api/swagger-codegen/tree/master))
-
-Swagger Codegen 2.X supports Swagger/OpenAPI version 2.
-
-group id: `io.swagger`
-maven central (maven plugin): https://mvnrepository.com/artifact/io.swagger/swagger-codegen-maven-plugin
-
-dependency example:
-
-```
-<dependency>
-    <groupId>io.swagger</groupId>
-    <artifactId>swagger-codegen-maven-plugin</artifactId>
-    <version>2.4.41</version>
-</dependency>
-```
-
-### Swagger Codegen 3.X ([`3.0.0` branch](https://github.com/swagger-api/swagger-codegen/tree/3.0.0))
-
-Swagger Codegen 3.X supports OpenAPI version 3 (and version 2 via spec conversion to version 3)
-[Online generator of version 3.X](https://github.com/swagger-api/swagger-codegen/tree/3.0.0#online-generators) supports both generation from Swagger/OpenAPI version 2 (by using engine + generators of 2.X) and version 3 specifications.
-
-group id: `io.swagger.codegen.v3`
-maven central: https://mvnrepository.com/artifact/io.swagger.codegen.v3
-
-dependency example:
-
-```
-<dependency>
-    <groupId>io.swagger.codegen.v3</groupId>
-    <artifactId>swagger-codegen-maven-plugin</artifactId>
-    <version>3.0.57</version>
-</dependency>
-```
-
-
-
-## Overview
-This is the Swagger Codegen project, which allows generation of API client libraries (SDK generation), server stubs and documentation automatically given an [OpenAPI Spec](https://github.com/OAI/OpenAPI-Specification). Currently, the following languages/frameworks are supported:
-
-- **API clients**: **ActionScript**, **Ada**, **Apex**, **Bash**, **C#** (.net 2.0, 3.5 or later), **C++** (cpprest, Qt5, Tizen), **Clojure**, **Dart**, **Elixir**, **Elm**, **Eiffel**, **Erlang**, **Go**, **Groovy**, **Haskell** (http-client, Servant), **Java** (Jersey1.x, Jersey2.x, OkHttp, Retrofit1.x, Retrofit2.x, Feign, RestTemplate, RESTEasy, Vertx, Google API Client Library for Java, Rest-assured), **Kotlin**, **Lua**, **Node.js** (ES5, ES6, AngularJS with Google Closure Compiler annotations) **Objective-C**, **Perl**, **PHP**, **PowerShell**, **Python**, **R**, **Ruby**, **Rust** (rust, rust-server), **Scala** (akka, http4s, swagger-async-httpclient), **Swift** (2.x, 3.x, 4.x, 5.x), **Typescript** (Angular1.x, Angular2.x, Fetch, jQuery, Node)
-- **Server stubs**: **Ada**, **C#** (ASP.NET Core, NancyFx), **C++** (Pistache, Restbed), **Erlang**, **Go**, **Haskell** (Servant), **Java** (MSF4J, Spring, Undertow, JAX-RS: CDI, CXF, Inflector, RestEasy, Play Framework, [PKMST](https://github.com/ProKarma-Inc/pkmst-getting-started-examples)), **Kotlin**, **PHP** (Lumen, Slim, Silex, [Symfony](https://symfony.com/), [Zend Expressive](https://github.com/zendframework/zend-expressive)), **Python** (Flask), **NodeJS**, **Ruby** (Sinatra, Rails5), **Rust** (rust-server), **Scala** ([Finch](https://github.com/finagle/finch), [Lagom](https://github.com/lagom/lagom), Scalatra)
-- **API documentation generators**: **HTML**, **Confluence Wiki**
-- **Configuration files**: [**Apache2**](https://httpd.apache.org/)
-- **Others**: **JMeter**
-
-Check out [OpenAPI-Spec](https://github.com/OAI/OpenAPI-Specification) for additional information about the OpenAPI project.
-
 # Table of contents
 
   - [Versioning](#versioning)
   - [Overview](#overview)
-  - [Table of Contents](#table-of-contents)
   - Installation
     - [Compatibility](#compatibility)
     - [Prerequisites](#prerequisites)
@@ -119,6 +58,64 @@ Check out [OpenAPI-Spec](https://github.com/OAI/OpenAPI-Specification) for addit
   - [Swagger Codegen Core Team](#swagger-codegen-core-team)
   - [Swagger Codegen Technical Committee](#swagger-codegen-technical-committee)
   - [License](#license)
+
+## Versioning
+* version 2.X 
+  * groupId: `io.swagger`
+  * `master` branch
+  * -- supports -- Swagger/OpenAPI version 2
+* version 3.X 
+  * groupId: `io.swagger.codegen.v3`
+  * [`3.0.0` branch](https://github.com/swagger-api/swagger-codegen/tree/3.0.0)
+  * -- supports -- Swagger/OpenAPI version
+    * 3
+    * 2 -- via -- spec conversion to version 3
+* [Online generator of version 3.X](https://github.com/swagger-api/swagger-codegen/tree/3.0.0#online-generators) supports both generation from Swagger/OpenAPI version
+  * 2 -- via -- engine + generators of 2.X
+  * 3
+
+
+**NOTE:** ⭐ this document refers to version 2.X, check [here](https://github.com/swagger-api/swagger-codegen/tree/3.0.0) for 3.X. ⭐
+
+
+### Swagger Codegen 2.X ([`master` branch](https://github.com/swagger-api/swagger-codegen/tree/master))
+
+* maven central (maven plugin): https://mvnrepository.com/artifact/io.swagger/swagger-codegen-maven-plugin
+* dependency example:
+    ```
+    <dependency>
+        <groupId>io.swagger</groupId>
+        <artifactId>swagger-codegen-maven-plugin</artifactId>
+        <version>2.4.41</version>
+    </dependency>
+    ```
+
+### Swagger Codegen 3.X ([`3.0.0` branch](https://github.com/swagger-api/swagger-codegen/tree/3.0.0))
+
+* maven central: https://mvnrepository.com/artifact/io.swagger.codegen.v3
+* dependency example:
+    ```
+    <dependency>
+        <groupId>io.swagger.codegen.v3</groupId>
+        <artifactId>swagger-codegen-maven-plugin</artifactId>
+        <version>3.0.57</version>
+    </dependency>
+    ```
+
+
+
+## Overview
+This is the Swagger Codegen project, which allows generation of API client libraries (SDK generation), server stubs and documentation automatically given an [OpenAPI Spec](https://github.com/OAI/OpenAPI-Specification). Currently, the following languages/frameworks are supported:
+
+- **API clients**: **ActionScript**, **Ada**, **Apex**, **Bash**, **C#** (.net 2.0, 3.5 or later), **C++** (cpprest, Qt5, Tizen), **Clojure**, **Dart**, **Elixir**, **Elm**, **Eiffel**, **Erlang**, **Go**, **Groovy**, **Haskell** (http-client, Servant), **Java** (Jersey1.x, Jersey2.x, OkHttp, Retrofit1.x, Retrofit2.x, Feign, RestTemplate, RESTEasy, Vertx, Google API Client Library for Java, Rest-assured), **Kotlin**, **Lua**, **Node.js** (ES5, ES6, AngularJS with Google Closure Compiler annotations) **Objective-C**, **Perl**, **PHP**, **PowerShell**, **Python**, **R**, **Ruby**, **Rust** (rust, rust-server), **Scala** (akka, http4s, swagger-async-httpclient), **Swift** (2.x, 3.x, 4.x, 5.x), **Typescript** (Angular1.x, Angular2.x, Fetch, jQuery, Node)
+- **Server stubs**: **Ada**, **C#** (ASP.NET Core, NancyFx), **C++** (Pistache, Restbed), **Erlang**, **Go**, **Haskell** (Servant), **Java** (MSF4J, Spring, Undertow, JAX-RS: CDI, CXF, Inflector, RestEasy, Play Framework, [PKMST](https://github.com/ProKarma-Inc/pkmst-getting-started-examples)), **Kotlin**, **PHP** (Lumen, Slim, Silex, [Symfony](https://symfony.com/), [Zend Expressive](https://github.com/zendframework/zend-expressive)), **Python** (Flask), **NodeJS**, **Ruby** (Sinatra, Rails5), **Rust** (rust-server), **Scala** ([Finch](https://github.com/finagle/finch), [Lagom](https://github.com/lagom/lagom), Scalatra)
+- **API documentation generators**: **HTML**, **Confluence Wiki**
+- **Configuration files**: [**Apache2**](https://httpd.apache.org/)
+- **Others**: **JMeter**
+
+Check out [OpenAPI-Spec](https://github.com/OAI/OpenAPI-Specification) for additional information about the OpenAPI project.
+
+
 
 
 ## Compatibility
