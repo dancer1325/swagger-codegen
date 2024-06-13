@@ -15,13 +15,11 @@
   - Installation
     - [Compatibility](#compatibility)
     - [Prerequisites](#prerequisites)
-      - [OS X Users](#os-x-users)
     - [Building](#building)
     - [Docker](#docker)
       - [Development in Docker](#development-in-docker)
       - [Run docker in Vagrant](#run-docker-in-vagrant)
       - [Public pre-built Docker images](#public-pre-built-docker-images)
-    - [Homebrew](#homebrew)
   - [Getting Started](#getting-started)
   - Generators
     - [To generate a sample client library](#to-generate-a-sample-client-library)
@@ -297,7 +295,10 @@ Swagger Codegen Version    | Release Date | OpenAPI Spec compatibility | Notes
     ```sh
     brew install swagger-codegen
     ```
+
+### Building
 * Build from source
+  * clone the project
   * install
     * [Java 11+](http://java.oracle.com)
     * [Apache maven 3.6.2 or greater](http://maven.apache.org/)
@@ -306,30 +307,15 @@ Swagger Codegen Version    | Release Date | OpenAPI Spec compatibility | Notes
     export JAVA_HOME=`/usr/libexec/java_home -v 11`
     export PATH=${JAVA_HOME}/bin:$PATH
     ```
-
-### Building
-
-After cloning the project, you can build it from source with this command:
-```sh
-mvn clean package
-```
-
-If you don't have maven installed, you may directly use the included [maven wrapper](https://github.com/takari/maven-wrapper), and build with the command:
-```sh
-./mvnw clean package
-```
-
-### Homebrew
-
-To install, run `brew install swagger-codegen`
-
-Here is an example usage:
-```sh
-swagger-codegen generate -i https://petstore.swagger.io/v2/swagger.json -l ruby -o /tmp/test/
-```
+  * build
+    ```sh
+    mvn clean package
+    # OR -- via -- maven wrapper
+    ./mvnw clean package    
+    ```
 
 ### Docker
-
+* TODO: Review
 #### Development in docker
 
 You can use `run-in-docker.sh` to do all development. This script maps your local repository to `/gen`
