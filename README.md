@@ -406,26 +406,7 @@ docker run --rm -v ${PWD}:/local swaggerapi/swagger-codegen-cli generate \
 The generated code will be located under `./out/go` in the current directory.
 
 ## Getting Started
-
-To generate a PHP client for https://petstore.swagger.io/v2/swagger.json, please run the following
-```sh
-git clone https://github.com/swagger-api/swagger-codegen
-cd swagger-codegen
-mvn clean package
-java -jar modules/swagger-codegen-cli/target/swagger-codegen-cli.jar generate \
-   -i https://petstore.swagger.io/v2/swagger.json \
-   -l php \
-   -o /var/tmp/php_api_client
-```
-(if you're on Windows, replace the last command with `java -jar modules\swagger-codegen-cli\target\swagger-codegen-cli.jar generate -i https://petstore.swagger.io/v2/swagger.json -l php -o c:\temp\php_api_client`)
-
-You can also download the JAR (latest release) directly from [maven.org](https://repo1.maven.org/maven2/io/swagger/swagger-codegen-cli/2.4.41/swagger-codegen-cli-2.4.41.jar)
-
-To get a list of **general** options available, please run `java -jar modules/swagger-codegen-cli/target/swagger-codegen-cli.jar help generate` (for version 3.x check [3.0.0 branch](https://github.com/swagger-api/swagger-codegen/tree/3.0.0))
-
-To get a list of PHP specified options (which can be passed to the generator with a config file via the `-c` option), please run `java -jar modules/swagger-codegen-cli/target/swagger-codegen-cli.jar config-help -l php`
-
-If the OpenAPI/Swagger spec is obtained from an untrusted source, please make sure you've reviewed the spec before using Swagger Codegen to generate the API client, server stub or documentation as [code injection](https://en.wikipedia.org/wiki/Code_injection) may occur
+* Check '/modules/swagger-codegen-cli'
 
 ## Generators
 
